@@ -1,0 +1,50 @@
+  VAR
+        { The schedule. }
+        Schedule: ScheduleType;
+
+        { Main loop continue flag. }
+        KeepRunning: boolean;
+
+        { Command input local to main. }
+        Command: string;
+
+    BEGIN
+        { Clear the schedule. }
+        SetSchedPart(Schedule, NotScheduled, Sun, Sat, FirstHour, LastHour);
+ 
+        { Do the commands. }
+        write('==> ');
+        ReadString(Command);
+        KeepRunning := TRUE;
+        WHILE KeepRunning DO
+            BEGIN
+                IF Command = 'sched' THEN 
+                    DoSched(Schedule)
+                ELSE IF Command = 'clear' THEN
+                    DoClear(Schedule)
+                ELSE IF Command = 'unsched' THEN
+                    DoUnsched(Schedule)
+                ELSE IF Command = 'print' THEN
+                    DoPrint(Schedule)
+                ELSE IF Command = 'total' THEN
+                    DoTotal(Schedule)
+                ELSE IF Command = 'quit' THEN 
+                    BEGIN
+                        writeln;
+                        writeln('>>> Program terminating. <<<');
+                        KeepRunning := FALSE
+                    END
+                ELSE
+                    { Command not recognized. }
+                    BEGIN
+                        readln;
+                        writeln;
+                        writeln('*** Command ', Command, 
+                                                    ' not recognized. ***');
+                    END;
+
+                { Go to a new page for next'n. }
+                write('==> ');
+                ReadString(Command)
+            END
+    END.
