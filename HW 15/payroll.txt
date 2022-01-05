@@ -1,0 +1,9 @@
+
+**********Payroll Information**********
+ Jack O. Lantern, $1050.00
+ Jack O. A. Trades, $1010.00
+ Jack B. Nimble, $787.50
+ Jack Frost, $465.00
+ Jack B. Stalk, $465.00
+**************End Payroll**************
+

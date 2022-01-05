@@ -1,0 +1,5 @@
+3174    20.00   Jack O. A. Trades
+3175    17.50   Jack O. Lantern
+3176    17.50   Jack B. Nimble
+3177    15.50   Jack Frost
+3178    15.50   Jack B. Stalk
